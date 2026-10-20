@@ -12,9 +12,9 @@ size_t ft_strlen(const char *s)
     return (i);
 
 }
-int main(void)
+/*int main(void)
 {
     char *s="hala   222";
     printf("%zu",ft_strlen(s));
     return (0);
-}
+}*/
