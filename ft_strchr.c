@@ -21,7 +21,7 @@ int	main(void)
 	s = "hello";
 	//result = ft_strchr(s, 'f');
 	//printf("%s\n", result);
-	if (ft_strchr(s, 'f'))
+	if (ft_strchr(s, NULL))
 	printf("Found\n");
 else
 	printf("Not found\n");
