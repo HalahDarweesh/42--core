@@ -20,7 +20,7 @@ while(i < n)
 return (dst);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	src[] = "helloooo";
 	char	dst[6];
@@ -29,4 +29,4 @@ int	main(void)
     dst[6] = '\0';
 	printf("%s\n", dst);
 	return (0);
-}
+}*/
