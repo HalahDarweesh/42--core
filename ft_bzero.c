@@ -13,7 +13,7 @@ void    ft_bzero(void *s, size_t n)
 
 
 
-int	main(void)
+/*int	main(void)
 {
 	char	str[] = "hello";
 	int		i;
@@ -28,6 +28,6 @@ int	main(void)
 		i++;
 	}
 	return (0);
-}
+}*/
 
 
