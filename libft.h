@@ -6,7 +6,7 @@
 /*   By: hadarwis <hadarwis@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 16:04:24 by hadarwis          #+#    #+#             */
-/*   Updated: 2026/10/24 13:20:08 by hadarwis         ###   ########.fr       */
+/*   Updated: 2026/10/24 14:26:32 by hadarwis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,8 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+
 
 #endif
