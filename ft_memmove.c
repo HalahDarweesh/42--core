@@ -1,43 +1,53 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hadarwis <hadarwis@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/23 16:02:51 by hadarwis          #+#    #+#             */
+/*   Updated: 2026/10/23 17:20:49 by hadarwis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    size_t  i;
-    unsigned char *dest;
-    const unsigned char *source;
+	size_t				i;
+	unsigned char		*dest;
+	const unsigned char	*source;
 
-    if (!src && !dst)
-        return (NULL);
-    dest = (unsigned char *)dst;
-    source = (const unsigned char *)src;
-    if (dest < source)
-    {
-        i = 0;
-        while (i < len)
-        {
-            dest[i] = source[i];
-            i++;
-        }
-    }
-    else
-    {
-        i = len;
-        while (i > 0)
-        {
-            i--;
-            dest[i] = source[i];
-        }
-    }
-    return (dst);
+	if (!src && !dst)
+		return (NULL);
+	dest = (unsigned char *) dst;
+	source = (const unsigned char *) src;
+	if (dest < source)
+	{
+		i = 0;
+		while (i < len)
+		{
+			dest[i] = source[i];
+			i++;
+		}
+	}
+	else
+	{
+		i = len;
+		while (i > 0)
+		{
+			i--;
+			dest[i] = source[i];
+		}
+	}
+	return (dst);
 }
 
-int main(void)
+/*int main(void)
 {
-    char str[] = "ABCDEFGH";
+char str[] = "ABCDEFGH";
 
-    ft_memmove(str + 2, str, 5);
-    printf("%s\n", str);
-    return (0);
-}
+ft_memmove(str + 2, str, 5);
+printf("%s\n", str);
+return (0);
+}*/

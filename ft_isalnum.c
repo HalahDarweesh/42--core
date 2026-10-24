@@ -1,15 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hadarwis <hadarwis@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/23 16:01:43 by hadarwis          #+#    #+#             */
+/*   Updated: 2026/10/23 17:09:27 by hadarwis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
-int     ft_isalnum(int c)
+
+int	ft_isalnum(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
-		|| (c >= '0' && c <= '9'))
-		return (1);
+			|| (c >= '0' && c <= '9'))
+	return (1);
 	else
 		return (0);
 }
 
-int main(void)
+/*int main(void)
 {
-    printf("%d" , ft_isalnum('6'));
-    return (0);
-}
+printf("%d" , ft_isalnum('6'));
+return (0);
+}*/

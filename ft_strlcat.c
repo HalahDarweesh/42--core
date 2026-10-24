@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hadarwis <hadarwis@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/23 16:03:14 by hadarwis          #+#    #+#             */
+/*   Updated: 2026/10/23 17:20:37 by hadarwis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -23,14 +35,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (dest_len + src_len - i);
 }
 
-   
-int	main(void)
+/*int	main(void)
 {
-	char	dst[8] = "Hello";
-	size_t	result;
+char	dst[8] = "Hello";
+size_t	result;
 
-	result = ft_strlcat(dst, " World", sizeof(dst));
-	printf("Destination: %s\n", dst);
-	printf("Return value: %zu\n", result);
-	return (0);
-}
+result = ft_strlcat(dst, " World", sizeof(dst));
+printf("Destination: %s\n", dst);
+printf("Return value: %zu\n", result);
+return (0);
+}*/
