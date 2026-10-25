@@ -18,10 +18,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char		*dest;
 	const unsigned char	*source;
 
-	if (!src && !dst)
+	if (!dst && !src)
 		return (NULL);
-	dest = (unsigned char *) dst;
-	source = (const unsigned char *) src;
+	dest = (unsigned char *)dst;
+	source = (const unsigned char *)src;
 	if (dest < source)
 	{
 		i = 0;
@@ -30,24 +30,23 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			dest[i] = source[i];
 			i++;
 		}
+		return (dst);
 	}
-	else
+	i = len;
+	while (i > 0)
 	{
-		i = len;
-		while (i > 0)
-		{
-			i--;
-			dest[i] = source[i];
-		}
+		i--;
+		dest[i] = source[i];
 	}
 	return (dst);
 }
 
-/*int main(void)
+/*int	main(void)
 {
-char str[] = "ABCDEFGH";
+	char	*str;
 
-ft_memmove(str + 2, str, 5);
-printf("%s\n", str);
-return (0);
+	str = "ABCDEFGH";
+	ft_memmove(str + 2, str, 5);
+	printf("%s\n", str);
+	return (0);
 }*/
