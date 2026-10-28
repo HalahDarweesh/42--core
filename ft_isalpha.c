@@ -18,8 +18,8 @@ int	ft_isalpha(int c)
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
 
-int	main(void)
+/*int	main(void)
 {
 	printf("%d", ft_isalpha('1'));
 	return (0);
-}
+}*/

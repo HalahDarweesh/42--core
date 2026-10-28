@@ -144,6 +144,11 @@ The linked list portion introduces dynamic data structures and function pointers
 
 These resources provide references for standard C library behavior, memory management, pointers, and related programming concepts.
 
+### AI Usage
+
+AI tools, including ChatGPT, were used as learning and development aids throughout the project. They helped explain C concepts, pointers, dynamic memory allocation, linked lists, and function behavior; clarify compiler errors; support debugging and testing; and explain Makefile usage.
+
+AI assistance was used to support understanding and troubleshooting. The implementation, testing, and final verification of the submitted code remain the responsibility of the project author.
 
 ## Project Structure
 
