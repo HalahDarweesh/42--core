@@ -6,31 +6,29 @@
 /*   By: hadarwis <hadarwis@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 15:59:16 by hadarwis          #+#    #+#             */
-/*   Updated: 2026/10/23 17:20:20 by hadarwis         ###   ########.fr       */
+/*   Updated: 2026/10/29 10:08:20 by hadarwis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	sign;
-	int	result;
+	int		sign;
+	long	result;
 
-	i = 0;
 	sign = 1;
 	result = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
+		nptr++;
+	if (*nptr == '+' || *nptr == '-')
 	{
-		if (str[i] == '-')
+		if (*nptr == '-')
 			sign = -1;
-		i++;
+		nptr++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (*nptr >= '0' && *nptr <= '9')
 	{
-		result = result * 10 + (str[i] - '0');
-		i++;
+		result = result * 10 + (*nptr - '0');
+		nptr++;
 	}
-	return (result * sign);
+	return ((int)(result * sign));
 }

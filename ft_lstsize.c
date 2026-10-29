@@ -6,12 +6,11 @@
 /*   By: hadarwis <hadarwis@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 16:42:26 by hadarwis          #+#    #+#             */
-/*   Updated: 2026/10/27 16:54:05 by hadarwis         ###   ########.fr       */
+/*   Updated: 2026/10/29 10:18:06 by hadarwis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-unsigned int	ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	unsigned int	count;
 	t_list			*current;

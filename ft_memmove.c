@@ -6,39 +6,37 @@
 /*   By: hadarwis <hadarwis@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 16:02:51 by hadarwis          #+#    #+#             */
-/*   Updated: 2026/10/23 17:20:49 by hadarwis         ###   ########.fr       */
+/*   Updated: 2026/10/29 10:19:54 by hadarwis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t				i;
-	unsigned char		*dest;
-	const unsigned char	*source;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	if (!dst && !src)
+	if (!dest && !src)
 		return (NULL);
-	dest = (unsigned char *)dst;
-	source = (const unsigned char *)src;
-	if (dest < source)
+	if (n == 0 || dest == src)
+		return (dest);
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if ((uintptr_t)d < (uintptr_t)s)
 	{
 		i = 0;
-		while (i < len)
-		{
-			dest[i] = source[i];
-			i++;
-		}
-		return (dst);
+		while (i < n)
+			d[i++] = s[i - 1];
 	}
-	i = len;
-	while (i > 0)
+	else
 	{
-		i--;
-		dest[i] = source[i];
+		i = n;
+		while (i > 0)
+			d[--i] = s[i];
 	}
-	return (dst);
+	return (dest);
 }
 
 /*int	main(void)
